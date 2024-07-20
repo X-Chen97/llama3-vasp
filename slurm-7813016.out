@@ -1,0 +1,559 @@
+current conda env is /global/scratch/users/chenxin0210/conda-env/llm
+================
+available nCPU is:
+12
+Thu Jul 18 04:06:10 2024       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 545.23.08              Driver Version: 545.23.08    CUDA Version: 12.3     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA A40                     Off | 00000000:06:00.0 Off |                    0 |
+|  0%   35C    P0              73W / 300W |      4MiB / 46068MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+|   1  NVIDIA A40                     Off | 00000000:46:00.0 Off |                    0 |
+|  0%   41C    P0              77W / 300W |      4MiB / 46068MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+|   2  NVIDIA A40                     Off | 00000000:8A:00.0 Off |                    0 |
+|  0%   34C    P0              73W / 300W |      4MiB / 46068MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+|   3  NVIDIA A40                     Off | 00000000:C5:00.0 Off |                    0 |
+|  0%   40C    P0              81W / 300W |      4MiB / 46068MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+================
+start running:
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `4`
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+wandb: Currently logged in as: cx9. Use `wandb login --relogin` to force relogin
+wandb: Currently logged in as: cx9. Use `wandb login --relogin` to force relogin
+wandb: Currently logged in as: cx9. Use `wandb login --relogin` to force relogin
+wandb: Currently logged in as: cx9. Use `wandb login --relogin` to force relogin
+wandb: Appending key for api.wandb.ai to your netrc file: /global/home/users/chenxin0210/.netrc
+wandb: Appending key for api.wandb.ai to your netrc file: /global/home/users/chenxin0210/.netrc
+wandb: Appending key for api.wandb.ai to your netrc file: /global/home/users/chenxin0210/.netrc
+wandb: Appending key for api.wandb.ai to your netrc file: /global/home/users/chenxin0210/.netrc
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:45<02:15, 45.30s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:45<02:17, 45.72s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:45<02:17, 45.73s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:45<02:17, 45.74s/it]Loading checkpoint shards:  50%|█████     | 2/4 [01:25<01:24, 42.36s/it]Loading checkpoint shards:  50%|█████     | 2/4 [01:26<01:25, 42.69s/it]Loading checkpoint shards:  50%|█████     | 2/4 [01:26<01:25, 42.62s/it]Loading checkpoint shards:  50%|█████     | 2/4 [01:26<01:25, 42.62s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [02:05<00:41, 41.26s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [02:06<00:41, 41.43s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [02:06<00:41, 41.39s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [02:06<00:41, 41.39s/it]Loading checkpoint shards: 100%|██████████| 4/4 [02:14<00:00, 28.33s/it]Loading checkpoint shards: 100%|██████████| 4/4 [02:14<00:00, 33.60s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [02:14<00:00, 28.45s/it]Loading checkpoint shards: 100%|██████████| 4/4 [02:14<00:00, 33.62s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [02:14<00:00, 28.39s/it]Loading checkpoint shards: 100%|██████████| 4/4 [02:14<00:00, 33.63s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [02:14<00:00, 28.37s/it]Loading checkpoint shards: 100%|██████████| 4/4 [02:14<00:00, 33.63s/it]
+/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
+
+Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
+  warnings.warn(message, FutureWarning)
+/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
+
+Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
+  warnings.warn(message, FutureWarning)
+/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
+
+Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
+  warnings.warn(message, FutureWarning)
+/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
+
+Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
+  warnings.warn(message, FutureWarning)
+/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:280: UserWarning: You passed a `max_seq_length` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:318: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:280: UserWarning: You passed a `max_seq_length` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:318: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:280: UserWarning: You passed a `max_seq_length` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:318: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:280: UserWarning: You passed a `max_seq_length` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:318: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+wandb: Tracking run with wandb version 0.17.4
+wandb: Run data is saved locally in /global/scratch/users/chenxin0210/llama/wandb/run-20240718_040859-i8na17nk
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run finetune-4gpu
+wandb: ⭐️ View project at https://wandb.ai/cx9/llama-dft
+wandb: 🚀 View run at https://wandb.ai/cx9/llama-dft/runs/i8na17nk
+  0%|          | 0/152 [00:00<?, ?it/s]/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/torch/utils/checkpoint.py:464: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.4 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/torch/utils/checkpoint.py:464: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.4 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/torch/utils/checkpoint.py:464: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.4 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/torch/utils/checkpoint.py:464: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.4 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+  1%|          | 1/152 [01:05<2:43:38, 65.02s/it]                                                 {'loss': 0.5412, 'grad_norm': 0.31579580903053284, 'learning_rate': 2e-05, 'epoch': 0.05}
+  1%|          | 1/152 [01:05<2:43:38, 65.02s/it]  1%|▏         | 2/152 [01:50<2:14:26, 53.77s/it]                                                 {'loss': 0.784, 'grad_norm': 0.41736337542533875, 'learning_rate': 4e-05, 'epoch': 0.1}
+  1%|▏         | 2/152 [01:50<2:14:26, 53.77s/it]  2%|▏         | 3/152 [02:20<1:46:37, 42.94s/it]                                                 {'loss': 0.8191, 'grad_norm': 0.31591126322746277, 'learning_rate': 6e-05, 'epoch': 0.15}
+  2%|▏         | 3/152 [02:20<1:46:37, 42.94s/it]  3%|▎         | 4/152 [02:41<1:24:34, 34.29s/it]                                                 {'loss': 0.8882, 'grad_norm': 0.34354132413864136, 'learning_rate': 8e-05, 'epoch': 0.21}
+  3%|▎         | 4/152 [02:41<1:24:34, 34.29s/it]  3%|▎         | 5/152 [03:08<1:16:50, 31.36s/it]                                                 {'loss': 0.9753, 'grad_norm': 0.38008856773376465, 'learning_rate': 0.0001, 'epoch': 0.26}
+  3%|▎         | 5/152 [03:08<1:16:50, 31.36s/it]  4%|▍         | 6/152 [04:05<1:37:31, 40.08s/it]                                                 {'loss': 0.5471, 'grad_norm': 0.1525367647409439, 'learning_rate': 0.00012, 'epoch': 0.31}
+  4%|▍         | 6/152 [04:05<1:37:31, 40.08s/it]  5%|▍         | 7/152 [04:39<1:32:27, 38.26s/it]                                                 {'loss': 0.6408, 'grad_norm': 0.20947837829589844, 'learning_rate': 0.00014, 'epoch': 0.36}
+  5%|▍         | 7/152 [04:39<1:32:27, 38.26s/it]  5%|▌         | 8/152 [05:05<1:21:58, 34.16s/it]                                                 {'loss': 0.6473, 'grad_norm': 0.24834118783473969, 'learning_rate': 0.00016, 'epoch': 0.41}
+  5%|▌         | 8/152 [05:05<1:21:58, 34.16s/it]  6%|▌         | 9/152 [05:22<1:08:52, 28.90s/it]                                                 {'loss': 0.6924, 'grad_norm': 0.3547215461730957, 'learning_rate': 0.00018, 'epoch': 0.46}
+  6%|▌         | 9/152 [05:22<1:08:52, 28.90s/it]  7%|▋         | 10/152 [05:58<1:13:53, 31.22s/it]                                                  {'loss': 0.635, 'grad_norm': 0.3024495542049408, 'learning_rate': 0.0002, 'epoch': 0.51}
+  7%|▋         | 10/152 [05:58<1:13:53, 31.22s/it]  7%|▋         | 11/152 [06:53<1:29:56, 38.27s/it]                                                  {'loss': 0.5078, 'grad_norm': 0.18049627542495728, 'learning_rate': 0.00019997552766852432, 'epoch': 0.56}
+  7%|▋         | 11/152 [06:53<1:29:56, 38.27s/it]  8%|▊         | 12/152 [07:26<1:25:34, 36.68s/it]                                                  {'loss': 0.5354, 'grad_norm': 0.20503292977809906, 'learning_rate': 0.00019990212265199738, 'epoch': 0.62}
+  8%|▊         | 12/152 [07:26<1:25:34, 36.68s/it]  9%|▊         | 13/152 [07:50<1:16:13, 32.90s/it]                                                  {'loss': 0.5444, 'grad_norm': 0.15485496819019318, 'learning_rate': 0.00019977982087825713, 'epoch': 0.67}
+  9%|▊         | 13/152 [07:50<1:16:13, 32.90s/it]  9%|▉         | 14/152 [08:06<1:04:05, 27.86s/it]                                                  {'loss': 0.5488, 'grad_norm': 0.174166738986969, 'learning_rate': 0.00019960868220749448, 'epoch': 0.72}
+  9%|▉         | 14/152 [08:06<1:04:05, 27.86s/it] 10%|▉         | 15/152 [08:56<1:18:31, 34.39s/it]                                                  {'loss': 0.4923, 'grad_norm': 0.17544406652450562, 'learning_rate': 0.00019938879040295508, 'epoch': 0.77}
+ 10%|▉         | 15/152 [08:56<1:18:31, 34.39s/it] 11%|█         | 16/152 [09:48<1:30:24, 39.89s/it]                                                  {'loss': 0.4714, 'grad_norm': 0.10441017895936966, 'learning_rate': 0.00019912025308994148, 'epoch': 0.82}
+ 11%|█         | 16/152 [09:48<1:30:24, 39.89s/it]
+  0%|          | 0/9 [00:00<?, ?it/s][A
+ 22%|██▏       | 2/9 [00:05<00:19,  2.84s/it][A
+ 33%|███▎      | 3/9 [00:08<00:18,  3.02s/it][A
+ 44%|████▍     | 4/9 [00:15<00:20,  4.15s/it][A
+ 56%|█████▌    | 5/9 [00:19<00:17,  4.34s/it][A
+ 67%|██████▋   | 6/9 [00:23<00:12,  4.11s/it][A
+ 78%|███████▊  | 7/9 [00:27<00:07,  3.99s/it][A
+ 89%|████████▉ | 8/9 [00:32<00:04,  4.45s/it][A
+100%|██████████| 9/9 [00:35<00:00,  4.10s/it][A                                                  
+                                             [A{'eval_loss': 0.44995757937431335, 'eval_runtime': 41.4815, 'eval_samples_per_second': 3.303, 'eval_steps_per_second': 0.217, 'epoch': 0.82}
+ 11%|█         | 16/152 [10:30<1:30:24, 39.89s/it]
+100%|██████████| 9/9 [00:38<00:00,  4.10s/it][A
+                                             [A/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/peft/utils/save_and_load.py:209: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/torch/utils/checkpoint.py:464: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.4 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+ 11%|█         | 17/152 [11:07<1:55:58, 51.54s/it]                                                  {'loss': 0.4847, 'grad_norm': 0.10138903558254242, 'learning_rate': 0.0001988032017031364, 'epoch': 0.87}
+ 11%|█         | 17/152 [11:07<1:55:58, 51.54s/it] 12%|█▏        | 18/152 [11:28<1:34:53, 42.49s/it]                                                  {'loss': 0.5419, 'grad_norm': 0.13372454047203064, 'learning_rate': 0.00019843779142227256, 'epoch': 0.92}
+ 12%|█▏        | 18/152 [11:28<1:34:53, 42.49s/it] 12%|█▎        | 19/152 [11:43<1:15:25, 34.02s/it]                                                  {'loss': 0.5978, 'grad_norm': 0.19215887784957886, 'learning_rate': 0.0001980242010961803, 'epoch': 0.97}
+ 12%|█▎        | 19/152 [11:43<1:15:25, 34.02s/it] 13%|█▎        | 20/152 [12:45<1:33:47, 42.63s/it]                                                  {'loss': 0.3391, 'grad_norm': 0.08752156794071198, 'learning_rate': 0.0001975626331552507, 'epoch': 1.03}
+ 13%|█▎        | 20/152 [12:45<1:33:47, 42.63s/it] 14%|█▍        | 21/152 [13:41<1:41:34, 46.52s/it]                                                  {'loss': 0.4429, 'grad_norm': 0.10903888195753098, 'learning_rate': 0.00019705331351235674, 'epoch': 1.08}
+ 14%|█▍        | 21/152 [13:41<1:41:34, 46.52s/it] 14%|█▍        | 22/152 [14:17<1:34:08, 43.45s/it]                                                  {'loss': 0.4504, 'grad_norm': 0.10460371524095535, 'learning_rate': 0.00019649649145228102, 'epoch': 1.13}
+ 14%|█▍        | 22/152 [14:17<1:34:08, 43.45s/it] 15%|█▌        | 23/152 [14:42<1:21:19, 37.82s/it]                                                  {'loss': 0.4854, 'grad_norm': 0.10843726992607117, 'learning_rate': 0.00019589243950970402, 'epoch': 1.18}
+ 15%|█▌        | 23/152 [14:42<1:21:19, 37.82s/it] 16%|█▌        | 24/152 [14:58<1:07:01, 31.42s/it]                                                  {'loss': 0.4841, 'grad_norm': 0.11299839615821838, 'learning_rate': 0.00019524145333581317, 'epoch': 1.23}
+ 16%|█▌        | 24/152 [14:58<1:07:01, 31.42s/it] 16%|█▋        | 25/152 [15:48<1:17:56, 36.82s/it]                                                  {'loss': 0.4097, 'grad_norm': 0.09565628319978714, 'learning_rate': 0.00019454385155359702, 'epoch': 1.28}
+ 16%|█▋        | 25/152 [15:48<1:17:56, 36.82s/it] 17%|█▋        | 26/152 [16:38<1:25:43, 40.82s/it]                                                  {'loss': 0.4686, 'grad_norm': 0.1135147362947464, 'learning_rate': 0.00019379997560189675, 'epoch': 1.33}
+ 17%|█▋        | 26/152 [16:38<1:25:43, 40.82s/it] 18%|█▊        | 27/152 [17:08<1:18:25, 37.64s/it]                                                  {'loss': 0.4633, 'grad_norm': 0.10503803193569183, 'learning_rate': 0.00019301018956828964, 'epoch': 1.38}
+ 18%|█▊        | 27/152 [17:08<1:18:25, 37.64s/it] 18%|█▊        | 28/152 [17:30<1:07:54, 32.86s/it]                                                  {'loss': 0.4684, 'grad_norm': 0.09254446625709534, 'learning_rate': 0.00019217488001088784, 'epoch': 1.44}
+ 18%|█▊        | 28/152 [17:30<1:07:54, 32.86s/it] 19%|█▉        | 29/152 [17:45<56:15, 27.45s/it]                                                  {'loss': 0.5529, 'grad_norm': 0.11090156435966492, 'learning_rate': 0.00019129445576913888, 'epoch': 1.49}
+ 19%|█▉        | 29/152 [17:45<56:15, 27.45s/it] 20%|█▉        | 30/152 [18:46<1:16:43, 37.73s/it]                                                  {'loss': 0.3234, 'grad_norm': 0.07057103514671326, 'learning_rate': 0.0001903693477637204, 'epoch': 1.54}
+ 20%|█▉        | 30/152 [18:46<1:16:43, 37.73s/it] 20%|██        | 31/152 [19:28<1:18:17, 38.83s/it]                                                  {'loss': 0.435, 'grad_norm': 0.08734951168298721, 'learning_rate': 0.00018940000878562758, 'epoch': 1.59}
+ 20%|██        | 31/152 [19:28<1:18:17, 38.83s/it] 21%|██        | 32/152 [19:56<1:11:04, 35.54s/it]                                                  {'loss': 0.4198, 'grad_norm': 0.08487100154161453, 'learning_rate': 0.0001883869132745561, 'epoch': 1.64}
+ 21%|██        | 32/152 [19:56<1:11:04, 35.54s/it]
+  0%|          | 0/9 [00:00<?, ?it/s][A
+ 22%|██▏       | 2/9 [00:05<00:19,  2.84s/it][A
+ 33%|███▎      | 3/9 [00:08<00:18,  3.02s/it][A
+ 44%|████▍     | 4/9 [00:15<00:20,  4.16s/it][A
+ 56%|█████▌    | 5/9 [00:19<00:17,  4.34s/it][A
+ 67%|██████▋   | 6/9 [00:23<00:12,  4.11s/it][A
+ 78%|███████▊  | 7/9 [00:27<00:07,  3.99s/it][A
+ 89%|████████▉ | 8/9 [00:32<00:04,  4.45s/it][A
+100%|██████████| 9/9 [00:35<00:00,  4.10s/it][A                                                  
+                                             [A{'eval_loss': 0.4000176191329956, 'eval_runtime': 41.492, 'eval_samples_per_second': 3.302, 'eval_steps_per_second': 0.217, 'epoch': 1.64}
+ 21%|██        | 32/152 [20:37<1:11:04, 35.54s/it]
+100%|██████████| 9/9 [00:38<00:00,  4.10s/it][A
+                                             [A/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/peft/utils/save_and_load.py:209: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/torch/utils/checkpoint.py:464: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.4 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+ 22%|██▏       | 33/152 [21:03<1:29:33, 45.16s/it]                                                  {'loss': 0.4421, 'grad_norm': 0.07770968228578568, 'learning_rate': 0.00018733055708668926, 'epoch': 1.69}
+ 22%|██▏       | 33/152 [21:03<1:29:33, 45.16s/it] 22%|██▏       | 34/152 [21:28<1:17:01, 39.17s/it]                                                  {'loss': 0.4928, 'grad_norm': 0.09510453045368195, 'learning_rate': 0.00018623145725200278, 'epoch': 1.74}
+ 22%|██▏       | 34/152 [21:28<1:17:01, 39.17s/it] 23%|██▎       | 35/152 [22:28<1:28:10, 45.21s/it]                                                  {'loss': 0.3318, 'grad_norm': 0.07529377937316895, 'learning_rate': 0.00018509015172120621, 'epoch': 1.79}
+ 23%|██▎       | 35/152 [22:28<1:28:10, 45.21s/it] 24%|██▎       | 36/152 [23:05<1:22:52, 42.86s/it]                                                  {'loss': 0.4413, 'grad_norm': 0.1079145073890686, 'learning_rate': 0.00018390719910244487, 'epoch': 1.85}
+ 24%|██▎       | 36/152 [23:05<1:22:52, 42.86s/it] 24%|██▍       | 37/152 [23:31<1:12:15, 37.70s/it]                                                  {'loss': 0.4287, 'grad_norm': 0.09686607867479324, 'learning_rate': 0.00018268317838789088, 'epoch': 1.9}
+ 24%|██▍       | 37/152 [23:31<1:12:15, 37.70s/it] 25%|██▌       | 38/152 [23:48<1:00:02, 31.60s/it]                                                  {'loss': 0.4686, 'grad_norm': 0.10767769068479538, 'learning_rate': 0.00018141868867035745, 'epoch': 1.95}
+ 25%|██▌       | 38/152 [23:48<1:00:02, 31.60s/it] 26%|██▌       | 39/152 [24:25<1:02:28, 33.17s/it]                                                  {'loss': 0.4956, 'grad_norm': 0.10178548842668533, 'learning_rate': 0.00018011434885007482, 'epoch': 2.0}
+ 26%|██▌       | 39/152 [24:25<1:02:28, 33.17s/it] 26%|██▋       | 40/152 [25:28<1:18:46, 42.20s/it]                                                  {'loss': 0.2795, 'grad_norm': 0.07648757100105286, 'learning_rate': 0.00017877079733177184, 'epoch': 2.05}
+ 26%|██▋       | 40/152 [25:28<1:18:46, 42.20s/it] 27%|██▋       | 41/152 [26:16<1:21:07, 43.85s/it]                                                  {'loss': 0.4109, 'grad_norm': 0.10058264434337616, 'learning_rate': 0.00017738869171221068, 'epoch': 2.1}
+ 27%|██▋       | 41/152 [26:16<1:21:07, 43.85s/it] 28%|██▊       | 42/152 [26:45<1:12:26, 39.51s/it]                                                  {'loss': 0.4039, 'grad_norm': 0.10472885519266129, 'learning_rate': 0.0001759687084583285, 'epoch': 2.15}
+ 28%|██▊       | 42/152 [26:45<1:12:26, 39.51s/it] 28%|██▊       | 43/152 [27:05<1:00:49, 33.48s/it]                                                  {'loss': 0.4276, 'grad_norm': 0.08348523080348969, 'learning_rate': 0.00017451154257614287, 'epoch': 2.21}
+ 28%|██▊       | 43/152 [27:05<1:00:49, 33.48s/it] 29%|██▉       | 44/152 [27:30<55:54, 31.06s/it]                                                  {'loss': 0.4625, 'grad_norm': 0.08603535592556, 'learning_rate': 0.00017301790727058345, 'epoch': 2.26}
+ 29%|██▉       | 44/152 [27:30<55:54, 31.06s/it] 30%|██▉       | 45/152 [28:30<1:10:46, 39.68s/it]                                                  {'loss': 0.3453, 'grad_norm': 0.09357539564371109, 'learning_rate': 0.00017148853359641626, 'epoch': 2.31}
+ 30%|██▉       | 45/152 [28:30<1:10:46, 39.68s/it] 30%|███       | 46/152 [29:08<1:09:06, 39.12s/it]                                                  {'loss': 0.4111, 'grad_norm': 0.11552654206752777, 'learning_rate': 0.00016992417010043142, 'epoch': 2.36}
+ 30%|███       | 46/152 [29:08<1:09:06, 39.12s/it] 31%|███       | 47/152 [29:34<1:01:51, 35.35s/it]                                                  {'loss': 0.4139, 'grad_norm': 0.07865733653306961, 'learning_rate': 0.00016832558245506935, 'epoch': 2.41}
+ 31%|███       | 47/152 [29:34<1:01:51, 35.35s/it] 32%|███▏      | 48/152 [29:53<52:45, 30.44s/it]                                                  {'loss': 0.4395, 'grad_norm': 0.09360222518444061, 'learning_rate': 0.0001666935530836651, 'epoch': 2.46}
+ 32%|███▏      | 48/152 [29:53<52:45, 30.44s/it]
+  0%|          | 0/9 [00:00<?, ?it/s][A
+ 22%|██▏       | 2/9 [00:05<00:19,  2.84s/it][A
+ 33%|███▎      | 3/9 [00:08<00:18,  3.02s/it][A
+ 44%|████▍     | 4/9 [00:15<00:20,  4.16s/it][A
+ 56%|█████▌    | 5/9 [00:19<00:17,  4.34s/it][A
+ 67%|██████▋   | 6/9 [00:23<00:12,  4.11s/it][A
+ 78%|███████▊  | 7/9 [00:27<00:07,  3.99s/it][A
+ 89%|████████▉ | 8/9 [00:32<00:04,  4.45s/it][A
+100%|██████████| 9/9 [00:35<00:00,  4.10s/it][A                                                
+                                             [A{'eval_loss': 0.37948352098464966, 'eval_runtime': 41.4932, 'eval_samples_per_second': 3.302, 'eval_steps_per_second': 0.217, 'epoch': 2.46}
+ 32%|███▏      | 48/152 [30:35<52:45, 30.44s/it]
+100%|██████████| 9/9 [00:38<00:00,  4.10s/it][A
+                                             [A/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/peft/utils/save_and_load.py:209: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/torch/utils/checkpoint.py:464: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.4 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+ 32%|███▏      | 49/152 [31:18<1:19:58, 46.59s/it]                                                  {'loss': 0.4299, 'grad_norm': 0.09988623112440109, 'learning_rate': 0.0001650288807774937, 'epoch': 2.51}
+ 32%|███▏      | 49/152 [31:18<1:19:58, 46.59s/it] 33%|███▎      | 50/152 [32:08<1:21:03, 47.68s/it]                                                  {'loss': 0.3961, 'grad_norm': 0.11136401444673538, 'learning_rate': 0.0001633323803048047, 'epoch': 2.56}
+ 33%|███▎      | 50/152 [32:08<1:21:03, 47.68s/it] 34%|███▎      | 51/152 [32:40<1:12:12, 42.90s/it]                                                  {'loss': 0.388, 'grad_norm': 0.08338748663663864, 'learning_rate': 0.00016160488201203644, 'epoch': 2.62}
+ 34%|███▎      | 51/152 [32:40<1:12:12, 42.90s/it] 34%|███▍      | 52/152 [33:03<1:01:47, 37.07s/it]                                                  {'loss': 0.4081, 'grad_norm': 0.08294110000133514, 'learning_rate': 0.00015984723141740576, 'epoch': 2.67}
+ 34%|███▍      | 52/152 [33:03<1:01:47, 37.07s/it] 35%|███▍      | 53/152 [33:19<50:46, 30.77s/it]                                                  {'loss': 0.4176, 'grad_norm': 0.11358752101659775, 'learning_rate': 0.0001580602887970721, 'epoch': 2.72}
+ 35%|███▍      | 53/152 [33:19<50:46, 30.77s/it] 36%|███▌      | 54/152 [34:09<59:35, 36.48s/it]                                                {'loss': 0.3764, 'grad_norm': 0.08047926425933838, 'learning_rate': 0.0001562449287640781, 'epoch': 2.77}
+ 36%|███▌      | 54/152 [34:09<59:35, 36.48s/it] 36%|███▌      | 55/152 [34:58<1:05:14, 40.36s/it]                                                  {'loss': 0.3968, 'grad_norm': 0.0853283628821373, 'learning_rate': 0.00015440203984027324, 'epoch': 2.82}
+ 36%|███▌      | 55/152 [34:58<1:05:14, 40.36s/it] 37%|███▋      | 56/152 [35:29<59:42, 37.32s/it]                                                  {'loss': 0.4105, 'grad_norm': 0.09054559469223022, 'learning_rate': 0.00015253252402142988, 'epoch': 2.87}
+ 37%|███▋      | 56/152 [35:29<59:42, 37.32s/it] 38%|███▊      | 57/152 [35:50<51:37, 32.61s/it]                                                {'loss': 0.4054, 'grad_norm': 0.08418476581573486, 'learning_rate': 0.0001506372963357644, 'epoch': 2.92}
+ 38%|███▊      | 57/152 [35:50<51:37, 32.61s/it] 38%|███▊      | 58/152 [36:03<42:01, 26.82s/it]                                                {'loss': 0.5188, 'grad_norm': 0.11089837551116943, 'learning_rate': 0.00014871728439607966, 'epoch': 2.97}
+ 38%|███▊      | 58/152 [36:03<42:01, 26.82s/it] 39%|███▉      | 59/152 [37:06<58:13, 37.57s/it]                                                {'loss': 0.2668, 'grad_norm': 0.0694214254617691, 'learning_rate': 0.00014677342794574817, 'epoch': 3.03}
+ 39%|███▉      | 59/152 [37:06<58:13, 37.57s/it] 39%|███▉      | 60/152 [38:00<1:05:13, 42.54s/it]                                                  {'loss': 0.3461, 'grad_norm': 0.10700073838233948, 'learning_rate': 0.00014480667839875786, 'epoch': 3.08}
+ 39%|███▉      | 60/152 [38:00<1:05:13, 42.54s/it] 40%|████      | 61/152 [38:35<1:00:59, 40.22s/it]                                                  {'loss': 0.3892, 'grad_norm': 0.08607770502567291, 'learning_rate': 0.00014281799837404552, 'epoch': 3.13}
+ 40%|████      | 61/152 [38:35<1:00:59, 40.22s/it] 41%|████      | 62/152 [38:59<53:01, 35.35s/it]                                                  {'loss': 0.3869, 'grad_norm': 0.07909226417541504, 'learning_rate': 0.0001408083612243465, 'epoch': 3.18}
+ 41%|████      | 62/152 [38:59<53:01, 35.35s/it] 41%|████▏     | 63/152 [39:15<43:57, 29.63s/it]                                                {'loss': 0.3982, 'grad_norm': 0.10643250495195389, 'learning_rate': 0.00013877875055979023, 'epoch': 3.23}
+ 41%|████▏     | 63/152 [39:15<43:57, 29.63s/it] 42%|████▏     | 64/152 [40:05<52:10, 35.57s/it]                                                {'loss': 0.3546, 'grad_norm': 0.07028248906135559, 'learning_rate': 0.00013673015976647568, 'epoch': 3.28}
+ 42%|████▏     | 64/152 [40:05<52:10, 35.57s/it]
+  0%|          | 0/9 [00:00<?, ?it/s][A
+ 22%|██▏       | 2/9 [00:05<00:19,  2.84s/it][A
+ 33%|███▎      | 3/9 [00:08<00:18,  3.02s/it][A
+ 44%|████▍     | 4/9 [00:15<00:20,  4.16s/it][A
+ 56%|█████▌    | 5/9 [00:19<00:17,  4.34s/it][A
+ 67%|██████▋   | 6/9 [00:23<00:12,  4.11s/it][A
+ 78%|███████▊  | 7/9 [00:27<00:07,  3.99s/it][A
+ 89%|████████▉ | 8/9 [00:32<00:04,  4.45s/it][A
+100%|██████████| 9/9 [00:35<00:00,  4.11s/it][A                                                
+                                             [A{'eval_loss': 0.36638781428337097, 'eval_runtime': 41.4998, 'eval_samples_per_second': 3.301, 'eval_steps_per_second': 0.217, 'epoch': 3.28}
+ 42%|████▏     | 64/152 [40:46<52:10, 35.57s/it]
+100%|██████████| 9/9 [00:38<00:00,  4.11s/it][A
+                                             [A/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/peft/utils/save_and_load.py:209: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/torch/utils/checkpoint.py:464: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.4 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+ 43%|████▎     | 65/152 [41:39<1:17:18, 53.31s/it]                                                  {'loss': 0.3963, 'grad_norm': 0.08117213845252991, 'learning_rate': 0.00013466359152026195, 'epoch': 3.33}
+ 43%|████▎     | 65/152 [41:39<1:17:18, 53.31s/it] 43%|████▎     | 66/152 [42:09<1:06:15, 46.22s/it]                                                  {'loss': 0.3916, 'grad_norm': 0.09390769153833389, 'learning_rate': 0.00013258005729601177, 'epoch': 3.38}
+ 43%|████▎     | 66/152 [42:09<1:06:15, 46.22s/it] 44%|████▍     | 67/152 [42:31<55:18, 39.04s/it]                                                  {'loss': 0.3929, 'grad_norm': 0.09666534513235092, 'learning_rate': 0.00013048057687252865, 'epoch': 3.44}
+ 44%|████▍     | 67/152 [42:31<55:18, 39.04s/it] 45%|████▍     | 68/152 [42:47<44:43, 31.94s/it]                                                {'loss': 0.4366, 'grad_norm': 0.10378408432006836, 'learning_rate': 0.0001283661778334297, 'epoch': 3.49}
+ 45%|████▍     | 68/152 [42:47<44:43, 31.94s/it] 45%|████▌     | 69/152 [43:49<56:54, 41.13s/it]                                                {'loss': 0.2603, 'grad_norm': 0.05940307304263115, 'learning_rate': 0.0001262378950641979, 'epoch': 3.54}
+ 45%|████▌     | 69/152 [43:49<56:54, 41.13s/it] 46%|████▌     | 70/152 [44:35<58:07, 42.53s/it]                                                {'loss': 0.3941, 'grad_norm': 0.09576219320297241, 'learning_rate': 0.00012409677024566144, 'epoch': 3.59}
+ 46%|████▌     | 70/152 [44:35<58:07, 42.53s/it] 47%|████▋     | 71/152 [45:05<52:04, 38.58s/it]                                                {'loss': 0.375, 'grad_norm': 0.08646050095558167, 'learning_rate': 0.00012194385134414608, 'epoch': 3.64}
+ 47%|████▋     | 71/152 [45:05<52:04, 38.58s/it] 47%|████▋     | 72/152 [45:25<44:05, 33.07s/it]                                                {'loss': 0.4242, 'grad_norm': 0.09131485968828201, 'learning_rate': 0.00011978019209855174, 'epoch': 3.69}
+ 47%|████▋     | 72/152 [45:25<44:05, 33.07s/it] 48%|████▊     | 73/152 [45:49<40:01, 30.40s/it]                                                {'loss': 0.4809, 'grad_norm': 0.11836235970258713, 'learning_rate': 0.00011760685150460362, 'epoch': 3.74}
+ 48%|████▊     | 73/152 [45:49<40:01, 30.40s/it] 49%|████▊     | 74/152 [46:49<51:09, 39.36s/it]                                                {'loss': 0.3067, 'grad_norm': 0.09019497781991959, 'learning_rate': 0.00011542489329653024, 'epoch': 3.79}
+ 49%|████▊     | 74/152 [46:49<51:09, 39.36s/it] 49%|████▉     | 75/152 [47:27<49:52, 38.86s/it]                                                {'loss': 0.3553, 'grad_norm': 0.08218874782323837, 'learning_rate': 0.00011323538542642227, 'epoch': 3.85}
+ 49%|████▉     | 75/152 [47:27<49:52, 38.86s/it] 50%|█████     | 76/152 [47:52<43:55, 34.68s/it]                                                {'loss': 0.3735, 'grad_norm': 0.08187750726938248, 'learning_rate': 0.000111039399541527, 'epoch': 3.9}
+ 50%|█████     | 76/152 [47:52<43:55, 34.68s/it] 51%|█████     | 77/152 [48:09<36:58, 29.58s/it]                                                {'loss': 0.3789, 'grad_norm': 0.1043090671300888, 'learning_rate': 0.00010883801045973425, 'epoch': 3.95}
+ 51%|█████     | 77/152 [48:09<36:58, 29.58s/it] 51%|█████▏    | 78/152 [48:47<39:25, 31.96s/it]                                                {'loss': 0.4305, 'grad_norm': 0.10081306099891663, 'learning_rate': 0.00010663229564351041, 'epoch': 4.0}
+ 51%|█████▏    | 78/152 [48:47<39:25, 31.96s/it] 52%|█████▏    | 79/152 [49:50<50:18, 41.35s/it]                                                {'loss': 0.241, 'grad_norm': 0.060448382049798965, 'learning_rate': 0.00010442333467253789, 'epoch': 4.05}
+ 52%|█████▏    | 79/152 [49:50<50:18, 41.35s/it] 53%|█████▎    | 80/152 [50:38<51:55, 43.26s/it]                                                {'loss': 0.3643, 'grad_norm': 0.09214311093091965, 'learning_rate': 0.00010221220871531869, 'epoch': 4.1}
+ 53%|█████▎    | 80/152 [50:38<51:55, 43.26s/it]
+  0%|          | 0/9 [00:00<?, ?it/s][A
+ 22%|██▏       | 2/9 [00:05<00:19,  2.84s/it][A
+ 33%|███▎      | 3/9 [00:08<00:18,  3.02s/it][A
+ 44%|████▍     | 4/9 [00:15<00:20,  4.15s/it][A
+ 56%|█████▌    | 5/9 [00:19<00:17,  4.33s/it][A
+ 67%|██████▋   | 6/9 [00:23<00:12,  4.11s/it][A
+ 78%|███████▊  | 7/9 [00:27<00:07,  3.99s/it][A
+ 89%|████████▉ | 8/9 [00:32<00:04,  4.44s/it][A
+100%|██████████| 9/9 [00:35<00:00,  4.10s/it][A                                                
+                                             [A{'eval_loss': 0.3548814058303833, 'eval_runtime': 41.4545, 'eval_samples_per_second': 3.305, 'eval_steps_per_second': 0.217, 'epoch': 4.1}
+ 53%|█████▎    | 80/152 [51:19<51:55, 43.26s/it]
+100%|██████████| 9/9 [00:38<00:00,  4.10s/it][A
+                                             [A/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/peft/utils/save_and_load.py:209: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/torch/utils/checkpoint.py:464: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.4 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+ 53%|█████▎    | 81/152 [51:55<1:03:02, 53.28s/it]                                                  {'loss': 0.3397, 'grad_norm': 0.09968963265419006, 'learning_rate': 0.0001, 'epoch': 4.15}
+ 53%|█████▎    | 81/152 [51:55<1:03:02, 53.28s/it] 54%|█████▍    | 82/152 [52:15<50:39, 43.43s/it]                                                  {'loss': 0.3679, 'grad_norm': 0.08897648006677628, 'learning_rate': 9.778779128468132e-05, 'epoch': 4.21}
+ 54%|█████▍    | 82/152 [52:15<50:39, 43.43s/it] 55%|█████▍    | 83/152 [52:40<43:43, 38.02s/it]                                                {'loss': 0.4441, 'grad_norm': 0.1182916983962059, 'learning_rate': 9.557666532746213e-05, 'epoch': 4.26}
+ 55%|█████▍    | 83/152 [52:40<43:43, 38.02s/it] 55%|█████▌    | 84/152 [53:37<49:28, 43.65s/it]                                                {'loss': 0.3163, 'grad_norm': 0.08000253140926361, 'learning_rate': 9.336770435648964e-05, 'epoch': 4.31}
+ 55%|█████▌    | 84/152 [53:37<49:28, 43.65s/it] 56%|█████▌    | 85/152 [54:12<45:55, 41.13s/it]                                                {'loss': 0.3488, 'grad_norm': 0.09047196060419083, 'learning_rate': 9.116198954026577e-05, 'epoch': 4.36}
+ 56%|█████▌    | 85/152 [54:12<45:55, 41.13s/it] 57%|█████▋    | 86/152 [54:39<40:20, 36.67s/it]                                                {'loss': 0.3721, 'grad_norm': 0.08669896423816681, 'learning_rate': 8.896060045847304e-05, 'epoch': 4.41}
+ 57%|█████▋    | 86/152 [54:39<40:20, 36.67s/it] 57%|█████▋    | 87/152 [54:57<33:50, 31.23s/it]                                                {'loss': 0.3776, 'grad_norm': 0.09140824526548386, 'learning_rate': 8.676461457357776e-05, 'epoch': 4.46}
+ 57%|█████▋    | 87/152 [54:57<33:50, 31.23s/it] 58%|█████▊    | 88/152 [55:35<35:20, 33.13s/it]                                                {'loss': 0.3016, 'grad_norm': 0.09665866941213608, 'learning_rate': 8.457510670346976e-05, 'epoch': 4.51}
+ 58%|█████▊    | 88/152 [55:35<35:20, 33.13s/it] 59%|█████▊    | 89/152 [56:31<41:53, 39.90s/it]                                                {'loss': 0.3196, 'grad_norm': 0.06261958926916122, 'learning_rate': 8.239314849539638e-05, 'epoch': 4.56}
+ 59%|█████▊    | 89/152 [56:31<41:53, 39.90s/it] 59%|█████▉    | 90/152 [57:07<40:07, 38.83s/it]                                                {'loss': 0.3791, 'grad_norm': 0.07854105532169342, 'learning_rate': 8.021980790144827e-05, 'epoch': 4.62}
+ 59%|█████▉    | 90/152 [57:07<40:07, 38.83s/it] 60%|█████▉    | 91/152 [57:31<35:02, 34.47s/it]                                                {'loss': 0.3855, 'grad_norm': 0.09019047021865845, 'learning_rate': 7.805614865585396e-05, 'epoch': 4.67}
+ 60%|█████▉    | 91/152 [57:31<35:02, 34.47s/it] 61%|██████    | 92/152 [57:47<28:58, 28.98s/it]                                                {'loss': 0.3706, 'grad_norm': 0.110510915517807, 'learning_rate': 7.590322975433857e-05, 'epoch': 4.72}
+ 61%|██████    | 92/152 [57:47<28:58, 28.98s/it] 61%|██████    | 93/152 [58:36<34:25, 35.00s/it]                                                {'loss': 0.3567, 'grad_norm': 0.08412271738052368, 'learning_rate': 7.376210493580212e-05, 'epoch': 4.77}
+ 61%|██████    | 93/152 [58:36<34:25, 35.00s/it] 62%|██████▏   | 94/152 [59:24<37:21, 38.64s/it]                                                {'loss': 0.3721, 'grad_norm': 0.07195284217596054, 'learning_rate': 7.163382216657034e-05, 'epoch': 4.82}
+ 62%|██████▏   | 94/152 [59:24<37:21, 38.64s/it] 62%|██████▎   | 95/152 [59:53<34:03, 35.85s/it]                                                {'loss': 0.3502, 'grad_norm': 0.07416250556707382, 'learning_rate': 6.951942312747134e-05, 'epoch': 4.87}
+ 62%|██████▎   | 95/152 [59:53<34:03, 35.85s/it] 63%|██████▎   | 96/152 [1:00:14<29:20, 31.44s/it]                                                  {'loss': 0.3891, 'grad_norm': 0.09491164982318878, 'learning_rate': 6.741994270398826e-05, 'epoch': 4.92}
+ 63%|██████▎   | 96/152 [1:00:14<29:20, 31.44s/it]
+  0%|          | 0/9 [00:00<?, ?it/s][A
+ 22%|██▏       | 2/9 [00:05<00:19,  2.84s/it][A
+ 33%|███▎      | 3/9 [00:08<00:18,  3.03s/it][A
+ 44%|████▍     | 4/9 [00:15<00:20,  4.16s/it][A
+ 56%|█████▌    | 5/9 [00:19<00:17,  4.34s/it][A
+ 67%|██████▋   | 6/9 [00:23<00:12,  4.11s/it][A
+ 78%|███████▊  | 7/9 [00:27<00:07,  3.99s/it][A
+ 89%|████████▉ | 8/9 [00:32<00:04,  4.45s/it][A
+100%|██████████| 9/9 [00:35<00:00,  4.11s/it][A                                                  
+                                             [A{'eval_loss': 0.3474481999874115, 'eval_runtime': 41.4957, 'eval_samples_per_second': 3.302, 'eval_steps_per_second': 0.217, 'epoch': 4.92}
+ 63%|██████▎   | 96/152 [1:00:56<29:20, 31.44s/it]
+100%|██████████| 9/9 [00:38<00:00,  4.11s/it][A
+                                             [A/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/peft/utils/save_and_load.py:209: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/torch/utils/checkpoint.py:464: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.4 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+ 64%|██████▍   | 97/152 [1:01:15<36:57, 40.32s/it]                                                  {'loss': 0.4598, 'grad_norm': 0.13192223012447357, 'learning_rate': 6.533640847973808e-05, 'epoch': 4.97}
+ 64%|██████▍   | 97/152 [1:01:15<36:57, 40.32s/it] 64%|██████▍   | 98/152 [1:02:18<42:18, 47.00s/it]                                                  {'loss': 0.2621, 'grad_norm': 0.061455849558115005, 'learning_rate': 6.326984023352435e-05, 'epoch': 5.03}
+ 64%|██████▍   | 98/152 [1:02:18<42:18, 47.00s/it] 65%|██████▌   | 99/152 [1:03:07<42:04, 47.62s/it]                                                  {'loss': 0.3433, 'grad_norm': 0.07775205373764038, 'learning_rate': 6.122124944020977e-05, 'epoch': 5.08}
+ 65%|██████▌   | 99/152 [1:03:07<42:04, 47.62s/it] 66%|██████▌   | 100/152 [1:03:38<37:02, 42.75s/it]                                                   {'loss': 0.3164, 'grad_norm': 0.08527160435914993, 'learning_rate': 5.91916387756535e-05, 'epoch': 5.13}
+ 66%|██████▌   | 100/152 [1:03:38<37:02, 42.75s/it] 66%|██████▋   | 101/152 [1:04:01<31:12, 36.71s/it]                                                   {'loss': 0.3656, 'grad_norm': 0.0885368138551712, 'learning_rate': 5.718200162595449e-05, 'epoch': 5.18}
+ 66%|██████▋   | 101/152 [1:04:01<31:12, 36.71s/it] 67%|██████▋   | 102/152 [1:04:17<25:31, 30.63s/it]                                                   {'loss': 0.3254, 'grad_norm': 0.10239069163799286, 'learning_rate': 5.5193321601242156e-05, 'epoch': 5.23}
+ 67%|██████▋   | 102/152 [1:04:17<25:31, 30.63s/it] 68%|██████▊   | 103/152 [1:05:07<29:38, 36.29s/it]                                                   {'loss': 0.3296, 'grad_norm': 0.09473390877246857, 'learning_rate': 5.322657205425183e-05, 'epoch': 5.28}
+ 68%|██████▊   | 103/152 [1:05:07<29:38, 36.29s/it] 68%|██████▊   | 104/152 [1:06:00<33:00, 41.26s/it]                                                   {'loss': 0.3373, 'grad_norm': 0.08191823214292526, 'learning_rate': 5.1282715603920374e-05, 'epoch': 5.33}
+ 68%|██████▊   | 104/152 [1:06:00<33:00, 41.26s/it] 69%|██████▉   | 105/152 [1:06:31<30:05, 38.41s/it]                                                   {'loss': 0.3399, 'grad_norm': 0.09395075589418411, 'learning_rate': 4.936270366423563e-05, 'epoch': 5.38}
+ 69%|██████▉   | 105/152 [1:06:31<30:05, 38.41s/it] 70%|██████▉   | 106/152 [1:06:53<25:39, 33.46s/it]                                                   {'loss': 0.3728, 'grad_norm': 0.09578940272331238, 'learning_rate': 4.746747597857014e-05, 'epoch': 5.44}
+ 70%|██████▉   | 106/152 [1:06:53<25:39, 33.46s/it] 70%|███████   | 107/152 [1:07:07<20:43, 27.62s/it]                                                   {'loss': 0.3992, 'grad_norm': 0.14230884611606598, 'learning_rate': 4.559796015972677e-05, 'epoch': 5.49}
+ 70%|███████   | 107/152 [1:07:07<20:43, 27.62s/it] 71%|███████   | 108/152 [1:08:10<27:56, 38.11s/it]                                                   {'loss': 0.2162, 'grad_norm': 0.051148202270269394, 'learning_rate': 4.375507123592194e-05, 'epoch': 5.54}
+ 71%|███████   | 108/152 [1:08:10<27:56, 38.11s/it] 72%|███████▏  | 109/152 [1:08:53<28:29, 39.76s/it]                                                   {'loss': 0.364, 'grad_norm': 0.08292171359062195, 'learning_rate': 4.1939711202927936e-05, 'epoch': 5.59}
+ 72%|███████▏  | 109/152 [1:08:53<28:29, 39.76s/it] 72%|███████▏  | 110/152 [1:09:20<25:02, 35.78s/it]                                                   {'loss': 0.363, 'grad_norm': 0.08830950409173965, 'learning_rate': 4.015276858259427e-05, 'epoch': 5.64}
+ 72%|███████▏  | 110/152 [1:09:20<25:02, 35.78s/it] 73%|███████▎  | 111/152 [1:09:39<21:03, 30.81s/it]                                                   {'loss': 0.3723, 'grad_norm': 0.08079114556312561, 'learning_rate': 3.839511798796357e-05, 'epoch': 5.69}
+ 73%|███████▎  | 111/152 [1:09:39<21:03, 30.81s/it] 74%|███████▎  | 112/152 [1:10:04<19:26, 29.17s/it]                                                   {'loss': 0.3761, 'grad_norm': 0.12049068510532379, 'learning_rate': 3.6667619695195285e-05, 'epoch': 5.74}
+ 74%|███████▎  | 112/152 [1:10:04<19:26, 29.17s/it]
+  0%|          | 0/9 [00:00<?, ?it/s][A
+ 22%|██▏       | 2/9 [00:05<00:19,  2.84s/it][A
+ 33%|███▎      | 3/9 [00:08<00:18,  3.02s/it][A
+ 44%|████▍     | 4/9 [00:15<00:20,  4.16s/it][A
+ 56%|█████▌    | 5/9 [00:19<00:17,  4.34s/it][A
+ 67%|██████▋   | 6/9 [00:23<00:12,  4.11s/it][A
+ 78%|███████▊  | 7/9 [00:27<00:07,  3.99s/it][A
+ 89%|████████▉ | 8/9 [00:32<00:04,  4.45s/it][A
+100%|██████████| 9/9 [00:35<00:00,  4.10s/it][A                                                   
+                                             [A{'eval_loss': 0.3450159728527069, 'eval_runtime': 41.487, 'eval_samples_per_second': 3.302, 'eval_steps_per_second': 0.217, 'epoch': 5.74}
+ 74%|███████▎  | 112/152 [1:10:46<19:26, 29.17s/it]
+100%|██████████| 9/9 [00:38<00:00,  4.10s/it][A
+                                             [A/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/peft/utils/save_and_load.py:209: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/torch/utils/checkpoint.py:464: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.4 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+ 74%|███████▍  | 113/152 [1:11:52<34:17, 52.75s/it]                                                   {'loss': 0.2902, 'grad_norm': 0.07518687844276428, 'learning_rate': 3.49711192225063e-05, 'epoch': 5.79}
+ 74%|███████▍  | 113/152 [1:11:52<34:17, 52.75s/it] 75%|███████▌  | 114/152 [1:12:33<31:04, 49.07s/it]                                                   {'loss': 0.3679, 'grad_norm': 0.09402016550302505, 'learning_rate': 3.330644691633492e-05, 'epoch': 5.85}
+ 75%|███████▌  | 114/152 [1:12:33<31:04, 49.07s/it] 76%|███████▌  | 115/152 [1:13:01<26:28, 42.93s/it]                                                   {'loss': 0.3404, 'grad_norm': 0.08751863241195679, 'learning_rate': 3.167441754493066e-05, 'epoch': 5.9}
+ 76%|███████▌  | 115/152 [1:13:01<26:28, 42.93s/it] 76%|███████▋  | 116/152 [1:13:21<21:29, 35.82s/it]                                                   {'loss': 0.327, 'grad_norm': 0.0943739116191864, 'learning_rate': 3.0075829899568597e-05, 'epoch': 5.95}
+ 76%|███████▋  | 116/152 [1:13:21<21:29, 35.82s/it] 77%|███████▋  | 117/152 [1:13:57<21:02, 36.08s/it]                                                   {'loss': 0.4091, 'grad_norm': 0.11837099492549896, 'learning_rate': 2.8511466403583766e-05, 'epoch': 6.0}
+ 77%|███████▋  | 117/152 [1:13:57<21:02, 36.08s/it] 78%|███████▊  | 118/152 [1:15:00<24:55, 43.99s/it]                                                   {'loss': 0.2477, 'grad_norm': 0.05223630741238594, 'learning_rate': 2.6982092729416587e-05, 'epoch': 6.05}
+ 78%|███████▊  | 118/152 [1:15:00<24:55, 43.99s/it] 78%|███████▊  | 119/152 [1:15:41<23:47, 43.26s/it]                                                   {'loss': 0.3328, 'grad_norm': 0.07275544106960297, 'learning_rate': 2.548845742385717e-05, 'epoch': 6.1}
+ 78%|███████▊  | 119/152 [1:15:41<23:47, 43.26s/it] 79%|███████▉  | 120/152 [1:16:09<20:34, 38.59s/it]                                                   {'loss': 0.349, 'grad_norm': 0.07617109268903732, 'learning_rate': 2.403129154167153e-05, 'epoch': 6.15}
+ 79%|███████▉  | 120/152 [1:16:09<20:34, 38.59s/it] 80%|███████▉  | 121/152 [1:16:28<16:58, 32.87s/it]                                                   {'loss': 0.3484, 'grad_norm': 0.08609392493963242, 'learning_rate': 2.2611308287789344e-05, 'epoch': 6.21}
+ 80%|███████▉  | 121/152 [1:16:28<16:58, 32.87s/it] 80%|████████  | 122/152 [1:16:53<15:12, 30.42s/it]                                                   {'loss': 0.3975, 'grad_norm': 0.1352936178445816, 'learning_rate': 2.1229202668228197e-05, 'epoch': 6.26}
+ 80%|████████  | 122/152 [1:16:53<15:12, 30.42s/it] 81%|████████  | 123/152 [1:17:51<18:44, 38.78s/it]                                                   {'loss': 0.2943, 'grad_norm': 0.07097259908914566, 'learning_rate': 1.988565114992519e-05, 'epoch': 6.31}
+ 81%|████████  | 123/152 [1:17:51<18:44, 38.78s/it] 82%|████████▏ | 124/152 [1:18:28<17:43, 37.99s/it]                                                   {'loss': 0.3241, 'grad_norm': 0.08928514271974564, 'learning_rate': 1.858131132964259e-05, 'epoch': 6.36}
+ 82%|████████▏ | 124/152 [1:18:28<17:43, 37.99s/it] 82%|████████▏ | 125/152 [1:18:53<15:21, 34.12s/it]                                                   {'loss': 0.3566, 'grad_norm': 0.08795833587646484, 'learning_rate': 1.7316821612109136e-05, 'epoch': 6.41}
+ 82%|████████▏ | 125/152 [1:18:53<15:21, 34.12s/it] 83%|████████▎ | 126/152 [1:19:10<12:36, 29.09s/it]                                                   {'loss': 0.3304, 'grad_norm': 0.09540566056966782, 'learning_rate': 1.609280089755515e-05, 'epoch': 6.46}
+ 83%|████████▎ | 126/152 [1:19:10<12:36, 29.09s/it] 84%|████████▎ | 127/152 [1:19:47<13:08, 31.54s/it]                                                   {'loss': 0.2935, 'grad_norm': 0.12911741435527802, 'learning_rate': 1.4909848278793782e-05, 'epoch': 6.51}
+ 84%|████████▎ | 127/152 [1:19:47<13:08, 31.54s/it] 84%|████████▍ | 128/152 [1:20:42<15:22, 38.44s/it]                                                   {'loss': 0.2988, 'grad_norm': 0.061754997819662094, 'learning_rate': 1.3768542747997215e-05, 'epoch': 6.56}
+ 84%|████████▍ | 128/152 [1:20:42<15:22, 38.44s/it]
+  0%|          | 0/9 [00:00<?, ?it/s][A
+ 22%|██▏       | 2/9 [00:05<00:19,  2.84s/it][A
+ 33%|███▎      | 3/9 [00:08<00:18,  3.02s/it][A
+ 44%|████▍     | 4/9 [00:15<00:20,  4.16s/it][A
+ 56%|█████▌    | 5/9 [00:19<00:17,  4.34s/it][A
+ 67%|██████▋   | 6/9 [00:23<00:12,  4.11s/it][A
+ 78%|███████▊  | 7/9 [00:27<00:07,  3.99s/it][A
+ 89%|████████▉ | 8/9 [00:32<00:04,  4.45s/it][A
+100%|██████████| 9/9 [00:35<00:00,  4.10s/it][A                                                   
+                                             [A{'eval_loss': 0.34291505813598633, 'eval_runtime': 41.4864, 'eval_samples_per_second': 3.302, 'eval_steps_per_second': 0.217, 'epoch': 6.56}
+ 84%|████████▍ | 128/152 [1:21:23<15:22, 38.44s/it]
+100%|██████████| 9/9 [00:38<00:00,  4.10s/it][A
+                                             [A/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/peft/utils/save_and_load.py:209: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/torch/utils/checkpoint.py:464: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.4 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+ 85%|████████▍ | 129/152 [1:22:05<19:54, 51.95s/it]                                                   {'loss': 0.3393, 'grad_norm': 0.07148449122905731, 'learning_rate': 1.2669442913310725e-05, 'epoch': 6.62}
+ 85%|████████▍ | 129/152 [1:22:05<19:54, 51.95s/it] 86%|████████▌ | 130/152 [1:22:30<16:04, 43.85s/it]                                                   {'loss': 0.335, 'grad_norm': 0.07842594385147095, 'learning_rate': 1.161308672544389e-05, 'epoch': 6.67}
+ 86%|████████▌ | 130/152 [1:22:30<16:04, 43.85s/it] 86%|████████▌ | 131/152 [1:22:48<12:36, 36.03s/it]                                                   {'loss': 0.3449, 'grad_norm': 0.09700834006071091, 'learning_rate': 1.059999121437244e-05, 'epoch': 6.72}
+ 86%|████████▌ | 131/152 [1:22:48<12:36, 36.03s/it] 87%|████████▋ | 132/152 [1:23:38<13:21, 40.07s/it]                                                   {'loss': 0.3124, 'grad_norm': 0.09807774424552917, 'learning_rate': 9.630652236279625e-06, 'epoch': 6.77}
+ 87%|████████▋ | 132/152 [1:23:38<13:21, 40.07s/it] 88%|████████▊ | 133/152 [1:24:29<13:44, 43.41s/it]                                                   {'loss': 0.3435, 'grad_norm': 0.06677891314029694, 'learning_rate': 8.70554423086114e-06, 'epoch': 6.82}
+ 88%|████████▊ | 133/152 [1:24:29<13:44, 43.41s/it] 88%|████████▊ | 134/152 [1:25:01<12:02, 40.15s/it]                                                   {'loss': 0.3535, 'grad_norm': 0.07747987657785416, 'learning_rate': 7.825119989112173e-06, 'epoch': 6.87}
+ 88%|████████▊ | 134/152 [1:25:01<12:02, 40.15s/it] 89%|████████▉ | 135/152 [1:25:23<09:51, 34.77s/it]                                                   {'loss': 0.3488, 'grad_norm': 0.07746236771345139, 'learning_rate': 6.989810431710375e-06, 'epoch': 6.92}
+ 89%|████████▉ | 135/152 [1:25:23<09:51, 34.77s/it] 89%|████████▉ | 136/152 [1:25:37<07:35, 28.45s/it]                                                   {'loss': 0.3899, 'grad_norm': 0.1489778459072113, 'learning_rate': 6.200024398103255e-06, 'epoch': 6.97}
+ 89%|████████▉ | 136/152 [1:25:37<07:35, 28.45s/it] 90%|█████████ | 137/152 [1:26:40<09:40, 38.72s/it]                                                   {'loss': 0.2455, 'grad_norm': 0.05655752494931221, 'learning_rate': 5.456148446402976e-06, 'epoch': 7.03}
+ 90%|█████████ | 137/152 [1:26:40<09:40, 38.72s/it] 91%|█████████ | 138/152 [1:27:36<10:17, 44.09s/it]                                                   {'loss': 0.2919, 'grad_norm': 0.06088557466864586, 'learning_rate': 4.758546664186869e-06, 'epoch': 7.08}
+ 91%|█████████ | 138/152 [1:27:36<10:17, 44.09s/it] 91%|█████████▏| 139/152 [1:28:12<09:00, 41.59s/it]                                                   {'loss': 0.3348, 'grad_norm': 0.0686853900551796, 'learning_rate': 4.107560490295992e-06, 'epoch': 7.13}
+ 91%|█████████▏| 139/152 [1:28:12<09:00, 41.59s/it] 92%|█████████▏| 140/152 [1:28:37<07:19, 36.60s/it]                                                   {'loss': 0.3376, 'grad_norm': 0.07668311148881912, 'learning_rate': 3.5035085477190143e-06, 'epoch': 7.18}
+ 92%|█████████▏| 140/152 [1:28:37<07:19, 36.60s/it] 93%|█████████▎| 141/152 [1:28:54<05:36, 30.61s/it]                                                   {'loss': 0.3558, 'grad_norm': 0.09325506538152695, 'learning_rate': 2.94668648764328e-06, 'epoch': 7.23}
+ 93%|█████████▎| 141/152 [1:28:54<05:36, 30.61s/it] 93%|█████████▎| 142/152 [1:29:43<06:02, 36.25s/it]                                                   {'loss': 0.3225, 'grad_norm': 0.10473993420600891, 'learning_rate': 2.4373668447493224e-06, 'epoch': 7.28}
+ 93%|█████████▎| 142/152 [1:29:43<06:02, 36.25s/it] 94%|█████████▍| 143/152 [1:30:32<06:01, 40.12s/it]                                                   {'loss': 0.3553, 'grad_norm': 0.06465215235948563, 'learning_rate': 1.9757989038197146e-06, 'epoch': 7.33}
+ 94%|█████████▍| 143/152 [1:30:32<06:01, 40.12s/it] 95%|█████████▍| 144/152 [1:31:02<04:55, 36.91s/it]                                                   {'loss': 0.3191, 'grad_norm': 0.07286221534013748, 'learning_rate': 1.562208577727442e-06, 'epoch': 7.38}
+ 95%|█████████▍| 144/152 [1:31:02<04:55, 36.91s/it]
+  0%|          | 0/9 [00:00<?, ?it/s][A
+ 22%|██▏       | 2/9 [00:05<00:19,  2.84s/it][A
+ 33%|███▎      | 3/9 [00:08<00:18,  3.02s/it][A
+ 44%|████▍     | 4/9 [00:15<00:20,  4.16s/it][A
+ 56%|█████▌    | 5/9 [00:19<00:17,  4.33s/it][A
+ 67%|██████▋   | 6/9 [00:23<00:12,  4.11s/it][A
+ 78%|███████▊  | 7/9 [00:27<00:07,  3.99s/it][A
+ 89%|████████▉ | 8/9 [00:32<00:04,  4.45s/it][A
+100%|██████████| 9/9 [00:35<00:00,  4.11s/it][A                                                   
+                                             [A{'eval_loss': 0.34267085790634155, 'eval_runtime': 41.4879, 'eval_samples_per_second': 3.302, 'eval_steps_per_second': 0.217, 'epoch': 7.38}
+ 95%|█████████▍| 144/152 [1:31:43<04:55, 36.91s/it]
+100%|██████████| 9/9 [00:38<00:00,  4.11s/it][A
+                                             [A/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/peft/utils/save_and_load.py:209: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/torch/utils/checkpoint.py:464: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.4 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+ 95%|█████████▌| 145/152 [1:32:11<05:25, 46.56s/it]                                                   {'loss': 0.3515, 'grad_norm': 0.07690633833408356, 'learning_rate': 1.1967982968635993e-06, 'epoch': 7.44}
+ 95%|█████████▌| 145/152 [1:32:11<05:25, 46.56s/it] 96%|█████████▌| 146/152 [1:32:25<03:40, 36.82s/it]                                                   {'loss': 0.3836, 'grad_norm': 0.15274424850940704, 'learning_rate': 8.797469100585431e-07, 'epoch': 7.49}
+ 96%|█████████▌| 146/152 [1:32:25<03:40, 36.82s/it] 97%|█████████▋| 147/152 [1:33:27<03:41, 44.35s/it]                                                   {'loss': 0.2483, 'grad_norm': 0.051130350679159164, 'learning_rate': 6.11209597044926e-07, 'epoch': 7.54}
+ 97%|█████████▋| 147/152 [1:33:27<03:41, 44.35s/it] 97%|█████████▋| 148/152 [1:34:11<02:57, 44.32s/it]                                                   {'loss': 0.3211, 'grad_norm': 0.06581570953130722, 'learning_rate': 3.913177925055189e-07, 'epoch': 7.59}
+ 97%|█████████▋| 148/152 [1:34:11<02:57, 44.32s/it] 98%|█████████▊| 149/152 [1:34:39<01:58, 39.36s/it]                                                   {'loss': 0.3582, 'grad_norm': 0.0747627541422844, 'learning_rate': 2.201791217428917e-07, 'epoch': 7.64}
+ 98%|█████████▊| 149/152 [1:34:39<01:58, 39.36s/it] 99%|█████████▊| 150/152 [1:34:58<01:06, 33.23s/it]                                                   {'loss': 0.3476, 'grad_norm': 0.08442166447639465, 'learning_rate': 9.78773480026396e-08, 'epoch': 7.69}
+ 99%|█████████▊| 150/152 [1:34:58<01:06, 33.23s/it] 99%|█████████▉| 151/152 [1:35:23<00:30, 30.70s/it]                                                   {'loss': 0.3065, 'grad_norm': 0.13367195427417755, 'learning_rate': 2.447233147570005e-08, 'epoch': 7.74}
+ 99%|█████████▉| 151/152 [1:35:23<00:30, 30.70s/it]100%|██████████| 152/152 [1:36:20<00:00, 38.62s/it]                                                   {'loss': 0.2874, 'grad_norm': 0.05725621432065964, 'learning_rate': 0.0, 'epoch': 7.79}
+100%|██████████| 152/152 [1:36:20<00:00, 38.62s/it]/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/peft/utils/save_and_load.py:209: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/scratch/users/chenxin0210/llama/run-llama.py", line 138, in <module>
+    trainer.train()
+  File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 451, in train
+    output = super().train(*args, **kwargs)
+  File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/transformers/trainer.py", line 1932, in train
+    return inner_training_loop(
+  File "/global/scratch/users/chenxin0210/llama/run-llama.py", line 138, in <module>
+    trainer.train()
+  File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/transformers/trainer.py", line 2393, in _inner_training_loop
+    self._load_best_model()
+  File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 451, in train
+    output = super().train(*args, **kwargs)
+  File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/transformers/trainer.py", line 2690, in _load_best_model
+    model.load_adapter(self.state.best_model_checkpoint, active_adapter)
+  File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/transformers/trainer.py", line 1932, in train
+    return inner_training_loop(
+  File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/peft/peft_model.py", line 984, in load_adapter
+    adapters_weights = load_peft_weights(model_id, device=torch_device, **hf_hub_download_kwargs)
+  File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/transformers/trainer.py", line 2393, in _inner_training_loop
+    self._load_best_model()
+Traceback (most recent call last):
+  File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/peft/utils/save_and_load.py", line 444, in load_peft_weights
+    adapters_weights = safe_load_file(filename, device=device)
+  File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/transformers/trainer.py", line 2690, in _load_best_model
+    model.load_adapter(self.state.best_model_checkpoint, active_adapter)
+  File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/safetensors/torch.py", line 310, in load_file
+    result[k] = f.get_tensor(k)
+  File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/peft/peft_model.py", line 984, in load_adapter
+    adapters_weights = load_peft_weights(model_id, device=torch_device, **hf_hub_download_kwargs)
+  File "/global/scratch/users/chenxin0210/llama/run-llama.py", line 138, in <module>
+    trainer.train()
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.96 GiB. GPU 
+  File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/peft/utils/save_and_load.py", line 444, in load_peft_weights
+    adapters_weights = safe_load_file(filename, device=device)
+  File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 451, in train
+    output = super().train(*args, **kwargs)
+  File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/safetensors/torch.py", line 310, in load_file
+    result[k] = f.get_tensor(k)
+  File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/transformers/trainer.py", line 1932, in train
+    return inner_training_loop(
+  File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/transformers/trainer.py", line 2393, in _inner_training_loop
+    self._load_best_model()
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.96 GiB. GPU 
+  File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/transformers/trainer.py", line 2690, in _load_best_model
+    model.load_adapter(self.state.best_model_checkpoint, active_adapter)
+  File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/peft/peft_model.py", line 984, in load_adapter
+    adapters_weights = load_peft_weights(model_id, device=torch_device, **hf_hub_download_kwargs)
+  File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/peft/utils/save_and_load.py", line 444, in load_peft_weights
+    adapters_weights = safe_load_file(filename, device=device)
+  File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/safetensors/torch.py", line 310, in load_file
+    result[k] = f.get_tensor(k)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.96 GiB. GPU 
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/global/scratch/users/chenxin0210/llama/run-llama.py", line 138, in <module>
+[rank3]:     trainer.train()
+[rank3]:   File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 451, in train
+[rank3]:     output = super().train(*args, **kwargs)
+[rank3]:   File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/transformers/trainer.py", line 1932, in train
+[rank3]:     return inner_training_loop(
+[rank3]:   File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/transformers/trainer.py", line 2393, in _inner_training_loop
+[rank3]:     self._load_best_model()
+[rank3]:   File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/transformers/trainer.py", line 2690, in _load_best_model
+[rank3]:     model.load_adapter(self.state.best_model_checkpoint, active_adapter)
+[rank3]:   File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/peft/peft_model.py", line 984, in load_adapter
+[rank3]:     adapters_weights = load_peft_weights(model_id, device=torch_device, **hf_hub_download_kwargs)
+[rank3]:   File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/peft/utils/save_and_load.py", line 444, in load_peft_weights
+[rank3]:     adapters_weights = safe_load_file(filename, device=device)
+[rank3]:   File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/safetensors/torch.py", line 310, in load_file
+[rank3]:     result[k] = f.get_tensor(k)
+[rank3]: torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.96 GiB. GPU 
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/global/scratch/users/chenxin0210/llama/run-llama.py", line 138, in <module>
+[rank1]:     trainer.train()
+[rank1]:   File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 451, in train
+[rank1]:     output = super().train(*args, **kwargs)
+[rank1]:   File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/transformers/trainer.py", line 1932, in train
+[rank1]:     return inner_training_loop(
+[rank1]:   File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/transformers/trainer.py", line 2393, in _inner_training_loop
+[rank1]:     self._load_best_model()
+[rank1]:   File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/transformers/trainer.py", line 2690, in _load_best_model
+[rank1]:     model.load_adapter(self.state.best_model_checkpoint, active_adapter)
+[rank1]:   File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/peft/peft_model.py", line 984, in load_adapter
+[rank1]:     adapters_weights = load_peft_weights(model_id, device=torch_device, **hf_hub_download_kwargs)
+[rank1]:   File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/peft/utils/save_and_load.py", line 444, in load_peft_weights
+[rank1]:     adapters_weights = safe_load_file(filename, device=device)
+[rank1]:   File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/safetensors/torch.py", line 310, in load_file
+[rank1]:     result[k] = f.get_tensor(k)
+[rank1]: torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.96 GiB. GPU 
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/global/scratch/users/chenxin0210/llama/run-llama.py", line 138, in <module>
+[rank2]:     trainer.train()
+[rank2]:   File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 451, in train
+[rank2]:     output = super().train(*args, **kwargs)
+[rank2]:   File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/transformers/trainer.py", line 1932, in train
+[rank2]:     return inner_training_loop(
+[rank2]:   File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/transformers/trainer.py", line 2393, in _inner_training_loop
+[rank2]:     self._load_best_model()
+[rank2]:   File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/transformers/trainer.py", line 2690, in _load_best_model
+[rank2]:     model.load_adapter(self.state.best_model_checkpoint, active_adapter)
+[rank2]:   File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/peft/peft_model.py", line 984, in load_adapter
+[rank2]:     adapters_weights = load_peft_weights(model_id, device=torch_device, **hf_hub_download_kwargs)
+[rank2]:   File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/peft/utils/save_and_load.py", line 444, in load_peft_weights
+[rank2]:     adapters_weights = safe_load_file(filename, device=device)
+[rank2]:   File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/safetensors/torch.py", line 310, in load_file
+[rank2]:     result[k] = f.get_tensor(k)
+[rank2]: torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.96 GiB. GPU 
+W0718 05:45:39.475000 23116753445376 torch/distributed/elastic/multiprocessing/api.py:851] Sending process 523634 closing signal SIGTERM
+W0718 05:45:39.476000 23116753445376 torch/distributed/elastic/multiprocessing/api.py:851] Sending process 523635 closing signal SIGTERM
+W0718 05:45:39.476000 23116753445376 torch/distributed/elastic/multiprocessing/api.py:851] Sending process 523636 closing signal SIGTERM
+E0718 05:45:40.190000 23116753445376 torch/distributed/elastic/multiprocessing/api.py:826] failed (exitcode: 1) local_rank: 3 (pid: 523637) of binary: /global/scratch/users/chenxin0210/conda-env/llm/bin/python
+Traceback (most recent call last):
+  File "/global/scratch/users/chenxin0210/conda-env/llm/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+    args.func(args)
+  File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1088, in launch_command
+    multi_gpu_launcher(args)
+  File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/accelerate/commands/launch.py", line 733, in multi_gpu_launcher
+    distrib_run.run(args)
+  File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/torch/distributed/run.py", line 870, in run
+    elastic_launch(
+  File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/global/scratch/users/chenxin0210/conda-env/llm/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 263, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+run-llama.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-07-18_05:45:39
+  host      : n0048.es1
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 523637)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
