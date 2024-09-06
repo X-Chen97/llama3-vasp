@@ -1,8 +1,8 @@
 /output
 /wandb
 /.hf_cache
-
-
+**/**/.DS_STORE
+slurm*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

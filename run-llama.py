@@ -25,7 +25,6 @@ device_string = PartialState().process_index
 
 os.environ["WANDB_NOTEBOOK_NAME"] = './test-llama.ipynb'
 os.environ["WANDB_PROJECT"] = 'llama-dft'
-wandb.login(key='a61e442e6922af9f064f40ede9cd909e47a9a2a6')
 
 attn_implementation = "eager"
 torch_dtype = torch.float16
